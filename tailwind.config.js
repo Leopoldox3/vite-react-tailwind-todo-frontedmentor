@@ -7,6 +7,18 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  darkMode: 'class',
+  plugins: [
+    function ({addUtilities}) {
+      const extendUnderline = {
+          '.underline': {
+              'textDecoration': 'line-through',
+              'text-decoration-color': 'red',
+          },
+      }
+      addUtilities(extendUnderline)
+    },
+    
+  ],
 }
 
